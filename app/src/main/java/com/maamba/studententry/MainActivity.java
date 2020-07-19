@@ -9,20 +9,17 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    Button addStudent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        addStudent = findViewById(R.id.addStudent);
 
-        addStudent.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-            }
-        });
 
+    }
+
+    public void addStudent(View view) {
+        Toast.makeText(MainActivity.this,"Toasted",Toast.LENGTH_SHORT).show();
     }
 }
