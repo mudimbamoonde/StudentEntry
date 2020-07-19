@@ -23,7 +23,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String sqlstatement = "CREATE TABLE " + TABLENAME + "(" + STUDENTID + " int primary key autoincrement, " +
+        String sqlstatement = "CREATE TABLE " + TABLENAME + "(" + STUDENTID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 FIRSTNAME + " text," +
                 LASTNAME + " text," +
                 GRADE + " text," +
