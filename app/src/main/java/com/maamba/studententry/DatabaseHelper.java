@@ -2,10 +2,14 @@ package com.maamba.studententry;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
@@ -54,6 +58,33 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }else{
             return true;
         }
+    }
+
+    public List<StudentModel> getStudents(){
+        List<StudentModel> model = new ArrayList<>();
+        SQLiteDatabase db = this.getReadableDatabase();
+        String stmt = "SELECT*FROM " + TABLENAME;
+
+        Cursor cursor = db.rawQuery(stmt,null);
+        if (cursor.moveToFirst()){
+            do {
+                int studentID = cursor.getInt(0);
+                String fname = cursor.getString(1);
+                String lname = cursor.getString(2);
+                String grade = cursor.getString(3);
+                String sClass = cursor.getString(4);
+                String ydate = cursor.getString(5);
+
+                StudentModel viewStudent = new StudentModel(studentID,fname,lname,grade,sClass,ydate);
+                model.add(viewStudent);
+
+            }while (cursor.moveToNext());
+        }
+
+        cursor.close();
+        db.close();
+
+        return model;
     }
 
 }

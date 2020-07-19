@@ -21,7 +21,17 @@ public class StudentModel {
         YearOfEntry = yearOfEntry;
     }
 
-
+    @Override
+    public String toString() {
+        return "StudentModel{" +
+                "StudentID=" + StudentID +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", Grade='" + Grade + '\'' +
+                ", StudentClass='" + StudentClass + '\'' +
+                ", YearOfEntry='" + YearOfEntry + '\'' +
+                '}';
+    }
 
     public int getStudentID() {
         return StudentID;
