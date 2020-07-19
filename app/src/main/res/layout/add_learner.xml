@@ -20,6 +20,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/vfirstname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="First Name" />
@@ -38,13 +39,14 @@
         app:layout_constraintTop_toBottomOf="@+id/firstname">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/vlastname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Last Name" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/age"
+        android:id="@+id/grade"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -56,27 +58,30 @@
         app:layout_constraintTop_toBottomOf="@+id/lastname">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/vgrade"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Age" />
+            android:hint="Grade" />
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/grade"
+        android:id="@+id/sClass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        app:layout_constraintEnd_toEndOf="@id/age"
-        app:layout_constraintStart_toStartOf="@id/age"
-        app:layout_constraintTop_toBottomOf="@+id/age">
+        app:layout_constraintEnd_toEndOf="@id/grade"
+        app:layout_constraintStart_toStartOf="@id/grade"
+        app:layout_constraintTop_toBottomOf="@+id/grade">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/vsClass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Grade" />
+            android:hint="Class" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -87,7 +92,24 @@
         android:text="Submit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/grade"
+        app:layout_constraintTop_toBottomOf="@+id/sClass"
         tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/ydate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:hint="Year of Entry"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sClass" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

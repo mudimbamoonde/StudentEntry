@@ -44,8 +44,7 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/ic_baseline_add_24"
-                        android:onClick="addStudent"/>
+                        android:background="@drawable/ic_baseline_add_24"/>
 <!--                    <ImageView-->
 <!--                        android:id="@+id/addStudent"-->
 <!--                        android:layout_gravity="center_horizontal"-->
@@ -88,7 +87,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/ic_baseline_attach_file_24"
-                        android:onClick="viewStudent"/>
+                        android:id="@+id/viewStudent"/>
                     <TextView
                         android:gravity="center_horizontal"
                         android:text="View Student"
