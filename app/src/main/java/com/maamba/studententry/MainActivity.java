@@ -16,10 +16,12 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
     }
 
     public void addStudent(View view) {
+        Toast.makeText(MainActivity.this,"Toasted",Toast.LENGTH_SHORT).show();
+    }
+    public void viewStudent(View view) {
         Toast.makeText(MainActivity.this,"Toasted",Toast.LENGTH_SHORT).show();
     }
 }
