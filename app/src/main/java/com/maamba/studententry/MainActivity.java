@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    Button addStudent,viewStudent,deleteStudent;
+    Button addStudent,viewStudent,deleteStudent,close;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         addStudent  = findViewById(R.id.addStudent);
         viewStudent  = findViewById(R.id.viewStudent);
+        close  = findViewById(R.id.close);
 
         addStudent.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,6 +49,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent remov = new Intent(MainActivity.this,removeStudent.class);
                 startActivity(remov);
+            }
+        });
+
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                System.exit(0);
             }
         });
 
