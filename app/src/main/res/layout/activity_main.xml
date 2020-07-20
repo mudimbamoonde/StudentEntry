@@ -185,7 +185,7 @@
             android:textSize="19dp"
             android:textStyle="bold"
             android:textAlignment="center"
-            android:text="Designed and Developed By MudimbaSoftware."
+            android:text="Designed and Developed By MudimbaSoftware"
             android:gravity="center_horizontal" />
 
     </LinearLayout>
