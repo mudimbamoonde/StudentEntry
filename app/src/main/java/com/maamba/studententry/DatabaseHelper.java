@@ -87,4 +87,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return model;
     }
 
+    public boolean deletStudent(StudentModel model){
+
+        SQLiteDatabase db = this.
+    }
+
 }
