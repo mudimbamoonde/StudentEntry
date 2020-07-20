@@ -23,7 +23,7 @@
               android:layout_marginStart="4dp"
               android:layout_marginLeft="4dp"
               android:text="Student Name"
-              android:textSize="35sp"
+              android:textSize="20sp"
               android:textStyle="bold"
               app:layout_constraintStart_toEndOf="@+id/image"
               tools:ignore="MissingConstraints"

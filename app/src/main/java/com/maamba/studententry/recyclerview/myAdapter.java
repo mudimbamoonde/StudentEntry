@@ -39,6 +39,6 @@ public class myAdapter extends RecyclerView.Adapter<MyHolder> {
 
     @Override
     public int getItemCount() {
-        return 0;
+        return model.size();
     }
 }

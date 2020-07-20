@@ -60,8 +60,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
-    public List<StudentModel> getStudents(){
-        List<StudentModel> model = new ArrayList<>();
+    public ArrayList<StudentModel> getStudents(){
+        ArrayList<StudentModel> model = new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();
         String stmt = "SELECT*FROM " + TABLENAME;
 
