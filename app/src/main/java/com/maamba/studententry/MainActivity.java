@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    Button addStudent,viewStudent;
+    Button addStudent,viewStudent,deleteStudent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         actionBar.setTitle("Maamba Secondary School");
 
 
+        deleteStudent = findViewById(R.id.deleteStudent);
 
         addStudent  = findViewById(R.id.addStudent);
         viewStudent  = findViewById(R.id.viewStudent);
@@ -38,6 +39,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent viewSt = new Intent(MainActivity.this,viewStudents.class);
                 startActivity(viewSt);
+            }
+        });
+
+
+        deleteStudent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent remov = new Intent(MainActivity.this,removeStudent.class);
+                startActivity(remov);
             }
         });
 

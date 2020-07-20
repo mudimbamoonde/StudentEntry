@@ -9,8 +9,11 @@
         android:roundIcon="@drawable/coat"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DetailedStudent"
-            android:parentActivityName=".viewStudents"/>
+        <activity android:name=".removeStudent"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".DetailedStudent"
+            android:parentActivityName=".viewStudents" />
         <activity
             android:name=".viewStudents"
             android:parentActivityName=".MainActivity" />
