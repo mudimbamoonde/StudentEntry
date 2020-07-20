@@ -18,7 +18,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle("Maamba Secondary School");
+        if (actionBar != null) {
+            actionBar.setTitle("Mudimba Academy");
+        }
 
 
         deleteStudent = findViewById(R.id.deleteStudent);
