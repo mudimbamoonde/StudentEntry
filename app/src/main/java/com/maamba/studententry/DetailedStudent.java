@@ -16,9 +16,9 @@ public class DetailedStudent extends AppCompatActivity {
 
         ActionBar actionBar = getSupportActionBar();
 
-        fname = findViewById(R.id.fname);
-        lname = findViewById(R.id.lname);
-        grade = findViewById(R.id.grade);
+        fname = findViewById(R.id.pfname);
+        lname = findViewById(R.id.plname);
+        grade = findViewById(R.id.Grade);
         fclass = findViewById(R.id.xclass);
         yeardate = findViewById(R.id.ydatetime);
 
@@ -31,20 +31,26 @@ public class DetailedStudent extends AppCompatActivity {
 //
 // */
 
-        Intent intent = getIntent();
-        String mfname = intent.getStringExtra("fname");
-        String mlname = intent.getStringExtra("lname");
-        String mgrade = intent.getStringExtra("grade");
-        String myclass = intent.getStringExtra("yclass");
-        String myear = intent.getStringExtra("yearlead");
+        Bundle intent = getIntent().getExtras();
+        if (intent != null) {
+            String  mfname = intent.getString("firstname");
+            String mlname = intent.getString("lastname");
+            String mgrade = intent.getString("grade");
+            String myclass = intent.getString("yclass");
+            String myear = intent.getString("yearlead");
+            actionBar.setTitle(mfname+" "+mlname);
 
-        actionBar.setTitle(mfname+" "+mlname);
+            fname.setText(mfname);
+            lname.setText(mlname);
+            grade.setText(mgrade);
+            fclass.setText(myclass);
+            yeardate.setText(myear);
 
-        fname.setText(mfname);
-        lname.setText(mlname);
-        grade.setText(mgrade);
-        fclass.setText(myclass);
-        yeardate.setText(myear);
+        }else{
+            //
+        }
+
+
 
     }
 }

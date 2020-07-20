@@ -74,14 +74,14 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/fname"
+                android:id="@+id/pfname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
                 android:text="Alex" />
 
             <TextView
-                android:id="@+id/lname"
+                android:id="@+id/plname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
