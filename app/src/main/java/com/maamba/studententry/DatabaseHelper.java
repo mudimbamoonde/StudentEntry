@@ -87,9 +87,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return model;
     }
 
-    public boolean deletStudent(StudentModel model){
-
-        SQLiteDatabase db = this.
+    public boolean deleteStudent(StudentModel model){
+        String sql = "DELETE FROM "+ TABLENAME + " WHERE "+ STUDENTID  + "=" + model.getStudentID();
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(sql,null);
+        if (cursor.moveToFirst()){
+            return true;
+        }else{
+            return false;
+        }
     }
 
 }
