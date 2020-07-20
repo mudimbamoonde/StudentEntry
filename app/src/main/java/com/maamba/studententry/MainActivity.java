@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         actionBar.setTitle("Maamba Secondary School");
 
 
+
         addStudent  = findViewById(R.id.addStudent);
         viewStudent  = findViewById(R.id.viewStudent);
 
