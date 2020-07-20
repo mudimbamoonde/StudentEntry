@@ -1,5 +1,6 @@
 package com.maamba.studententry;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
@@ -25,6 +26,8 @@ public class AddLearner extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_learner);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("Add Students");
 
         helper = new DatabaseHelper(this);
 

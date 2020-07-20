@@ -1,5 +1,6 @@
 package com.maamba.studententry;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -23,6 +24,9 @@ public class viewStudents extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.view_students);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("View Students");
 
         helper = new DatabaseHelper(this);
 //        view = findViewById(R.id.listView);
