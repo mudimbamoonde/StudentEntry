@@ -173,8 +173,22 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
+
         </GridLayout>
 
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"
+            android:textSize="19dp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:text="Designed and Developed By MudimbaSoftware."
+            android:gravity="center_horizontal" />
+
     </LinearLayout>
+
 
 </LinearLayout>
