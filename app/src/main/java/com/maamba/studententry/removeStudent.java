@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 
+import com.maamba.studententry.RemoveStudent.DeleteAdapter;
 import com.maamba.studententry.recyclerview.myAdapter;
 
 import java.util.ArrayList;
@@ -20,7 +21,7 @@ public class removeStudent extends AppCompatActivity {
     ListView view;
 
     RecyclerView removeRe;
-    myAdapter adapter;
+    DeleteAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,18 +38,9 @@ public class removeStudent extends AppCompatActivity {
         removeRe.setLayoutManager(new LinearLayoutManager(this));
 
         ArrayList<StudentModel> allStudents = helper.getStudents();
-        adapter = new myAdapter(this,allStudents);
+        adapter = new DeleteAdapter(this,allStudents);
         removeRe.setAdapter(adapter);
 
-        
-
-        removeLearner = findViewById(R.id.removeLearner);
-        removeLearner.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
 
 
     }

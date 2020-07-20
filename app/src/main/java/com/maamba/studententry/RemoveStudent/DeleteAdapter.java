@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.maamba.studententry.DatabaseHelper;
 import com.maamba.studententry.DetailedStudent;
 import com.maamba.studententry.R;
 import com.maamba.studententry.StudentModel;
@@ -28,21 +29,26 @@ public class DeleteAdapter extends RecyclerView.Adapter<DeleteHolder> {
     @NonNull
     @Override
     public DeleteHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.rows,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.remove,parent,false);
         return new DeleteHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull DeleteHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final DeleteHolder holder, final int position) {
         String fullName = model.get(position).getFirstName() +" "+ model.get(position).getLastName();
         holder.studentName.setText(fullName);
         holder.yearDate.setText(model.get(position).getYearOfEntry());
 
-        holder.setItemClickListener(new DeleteItemClickListener() {
+        holder.delete.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemClickListener(View v, int position) {
-                Toast.makeText(context,position,Toast.LENGTH_SHORT).show();
+            public void onClick(View view) {
+
+                DatabaseHelper helper = new DatabaseHelper(context);
+                StudentModel clickedStudent =  model.get(position);
+                helper.deleteStudent(clickedStudent);
+                Toast.makeText(context,"Successfully Deleted! Refresh Page",Toast.LENGTH_SHORT).show();
             }
+
         });
     }
 
